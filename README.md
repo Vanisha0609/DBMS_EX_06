@@ -1,4 +1,4 @@
-# EXP No.65+                                                                                 
+# EXP No.6                                                                                 
 # Date:23/04/2024
 # AIM: 
 To study and implement different types of joins.
