@@ -174,31 +174,31 @@ WHERE t.test_name='Blood Pressure';
 ![image](https://github.com/Vanisha0609/DBMS_EX_06/assets/119104009/b8230a56-040c-4469-8bd6-8372ef164602)
 
 ## QUESTION 9:
-![image](https://github.com/Mena-Rossini/DBMS_EX_06/assets/102855266/a1f85727-f0f9-49eb-a8e0-6930829bdc21)
+![image](https://github.com/Vanisha0609/DBMS_EX_06/assets/119104009/53f7cc83-ca8b-446f-ab60-043a1fd409a4)
 
 ## QUERY:
 ```
-SELECT  c.*
-FROM  customer c
-LEFT JOIN  salesman s ON c.salesman_id = s.salesman_id
-WHERE  s.name = 'Mc Lyon';
-
+select c.cust_name,c.city,o.ord_no,o.ord_date,o.purch_amt as "Order Amount"
+from customer c
+left join orders o on c.customer_id=o.customer_id
+order by o.ord_date asc;
 ```
 ## OUTPUT:
-![image](https://github.com/Mena-Rossini/DBMS_EX_06/assets/102855266/bdb255c3-46f1-44b9-ba1c-321b8fea1181)
+![image](https://github.com/Vanisha0609/DBMS_EX_06/assets/119104009/cc25e6bf-9868-4ab9-b880-4dbf3a4498dd)
 
 ## QUESTION 10:
-![image](https://github.com/Mena-Rossini/DBMS_EX_06/assets/102855266/00ec9048-18c5-4023-ba80-666656e0ece3)
+![image](https://github.com/Vanisha0609/DBMS_EX_06/assets/119104009/1584a1df-1cf7-4b82-990b-93077d73f2b1)
 
 ## QUERY:
 ```
-SELECT c.cust_name,o.ord_no,o.ord_date,o.purch_amt
-FROM customer c
-LEFT JOIN orders o ON c.customer_id = o.customer_id;
+select s.name,c.cust_name,c.city,c.grade,c.salesman_id
+from Salesman s
+inner join Customer c on s.salesman_id=c.salesman_id
+where c.grade <=100;
 
 ```
 ## OUTPUT:
-![image](https://github.com/Mena-Rossini/DBMS_EX_06/assets/102855266/fd5a26ac-6aa2-4808-88ab-78d6350b5b95)
+![image](https://github.com/Vanisha0609/DBMS_EX_06/assets/119104009/23e6fd0f-8371-4581-aa4f-fe8a7df2817c)
 
 # RESULT:
 Thus,we studied and implemented different types of joins.
